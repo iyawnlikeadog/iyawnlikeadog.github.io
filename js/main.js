@@ -1,36 +1,44 @@
 var $ = jQuery.noConflict();
 
+// hide preloader cover
+
 $(window).load(function(){
     $('#cover').fadeOut(1000).css('','').delay(1200).remove();
 });
 
 $(document).ready(function(){
 
+	var win_w = $(window).width();
+	var win_h = $(window).height();
+	var central_h = $('#intro > .central').height();
+
+	$('#intro > .central').css('margin-top', - central_h/2 - 37);
+	$('#intro').height(win_h);
+
 	var movementStrength = 60;
 	var height = movementStrength / $(window).height();
 	var width = movementStrength / $(window).width();
-	var win_w = $(window).width();
-	var win_h = $(window).height();
-
 	$('#bgx').css('background-size', (win_w + 60) + 'px ' + (win_h + 60) + 'px');
 
 	$('body').on('mousemove', function(e){
-		// console.log(e.clientY);
 		var pageX = e.clientX - win_w / 2;
+
 		var pageY = e.clientY - win_h / 2;
 		var newvalueX = width * pageX * -1 - 30;
 		var newvalueY = height * pageY * -1 - 30;
+
 		$('#bgx').css("background-position", newvalueX+"px     "+newvalueY+"px");
-		// var amountMovedX = (e.pageX * -1 / 6);
-		// var amountMovedY = (e.pageY * -1 / 6);
-		// $('#bgx').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+
 	});
 
 
 	// Set header height equal window's height
 
-//	var $h = $(window).height();
-	$('#intro').height(win_h);
+	// $('.icon-down-open').css('top', win_h - 80);
+	// var $h = $(window).height();
+
+	// $('#top').css('margin-top', win_h);
+
 //
 //	$(window).resize(function() {
 //		$('header').height($h);
@@ -138,7 +146,7 @@ $(document).ready(function(){
 				'-o-filter'      : 'hue-rotate(' + hue + 'deg)',
 				'-ms-filter'     : 'hue-rotate(' + hue + 'deg)'
 			});
-			$('.noise').css('opacity','0.03');
+			$('#noise').css('opacity','0.03');
 
 			setTimeout(function() {
 
@@ -149,7 +157,7 @@ $(document).ready(function(){
 					'-o-filter'      : 'hue-rotate(0deg)',
 					'-ms-filter'     : 'hue-rotate(0deg)'
 				});
-				$('.noise').animate({'opacity':'0'}, 300);
+				$('#noise').animate({'opacity':'0'}, 300);
 
 				makeSomeNoise();
 

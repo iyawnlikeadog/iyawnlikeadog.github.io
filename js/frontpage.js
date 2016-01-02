@@ -2,7 +2,7 @@
 
 $(function(){
 
-    var header = $('.canvas-wrapper'),
+    var header = $('#canvas-wrapper'),
         canvas = $('<canvas></canvas>').appendTo(header)[0],
 
         ctx    = canvas.getContext('2d'),
@@ -90,7 +90,7 @@ $(function(){
 
     idle = setInterval(createDots, 1000/30);
 
-    $(canvas).on('mousemove mouseleave', function(e){
+    $(document).on('mousemove mouseleave', function(e){
         if(e.type == 'mousemove'){
             mousePosition.x = e.clientX;
             mousePosition.y = e.clientY;
