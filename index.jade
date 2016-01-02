@@ -1,0 +1,83 @@
+// output: index.html, pretty: true
+
+doctype html
+html
+  head
+  
+    title Ildar's portfolio website
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    link(rel='shortcut icon', href='img/favicon.ico')
+
+    link(rel='stylesheet', type='text/css', href='css/reset.css')
+    link(rel='stylesheet', type='text/css', href='css/preloader.css')
+    link(rel='stylesheet', type='text/css', href='css/fontello.css')
+    link(rel='stylesheet', type='text/css', href='css/compiled/animate.custom.min.css')
+    link(rel='stylesheet', type='text/css', href='css/compiled/style.css')
+    //- link(rel="stylesheet", type="text/css", href="css/owl.carousel.css")
+
+    script(type='text/javascript', src='js/libs/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='js/libs/prefixfree.min.js')
+    script(type='text/javascript', src='js/libs/wow.min.js')
+    script(type='text/javascript', src='js/frontpage.js')
+    //- script(type='text/javascript', src='js/libs/parallax.js')
+    //- script(type='text/javascript', src='js/libs/matchHeight.min.js')
+    script(type='text/javascript', src='js/main.js')
+
+body
+  
+  div#cover
+    div.cube1
+    div.cube2
+    
+  div#bgx
+  div.noise
+  div.canvas-wrapper
+  img(src='img/avatar.jpg',class='avatar')
+      
+  div#wrapper
+    //- img(src='img/topicons.png')
+    //- img(src='img/demobuttons.png',class='demobuttons')
+    
+    section#intro
+        
+      h2 Hi! My name is
+      h1 Ildar
+      h2 I'm designer & web developer
+        
+      //- ul.menu
+      //-   li.active About Me
+      //-   li Skills
+      //-   li Projects
+      //-   li Contacts
+      
+      span(class="icon-down-open wow pulse animated",data-wow-iteration="infinite",data-wow-duration="2s")
+        
+    section#top
+      h3 Hi! I'm
+      h1 Ildar A.
+      h2 Designer & web developer
+      
+      p Hi! My name is Ildar and I'm web developer.<br> I was born and currently located in Karaganda, Kazakhstan.
+      
+      table
+        tr: td Location</td><td>Karaganda, Kazakhstan
+        tr: td Work remotely</td><td>Yes
+        tr: td Relocation</td><td>Yes
+        tr: td E-mail</td><td><a href="mailto:iyawnlikeadog@gmail.com">iyawnlikeadog@gmail.com</a>
+        
+    section#techs    
+      h3 Technologies
+      div#tech
+          
+    section#skills
+      h3 Skills
+      div#graphic
+        b: span Awesome skills</span>100%
+        b: span Average skills</span>50%
+        b: span Basic skills</span>0%
+
+    section#works
+      
+    //- script(type='text/javascript', src='http://localhost:35729/livereload.js')

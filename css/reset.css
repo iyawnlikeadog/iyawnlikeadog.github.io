@@ -1,0 +1,181 @@
+/* HTML5 Reset */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Border-Box */
+
+*, *:before, *:after {box-sizing: border-box;}
+
+/* Responsive images and other embedded objects */
+
+img, object {max-width: 100%; height: auto;}
+
+/* Other */
+
+html {overflow-y: scroll;}
+body { overflow: hidden; }
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none;}
+
+/* Table still need cellspacing="0" in the markup */
+
+table {border-collapse: collapse; border-spacing: 0; font-size: inherit; font: 100%;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+td img {vertical-align: top;}
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+/* Inputs */
+
+input, select {vertical-align: middle;}
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align:bottom;box-shadow:none!important;border:none!important;}
+select, input, textarea {}
+button, input, select, textarea {margin: 0;}
+button, input[type=button] {width: auto; overflow: visible;}
+
+/* Text */
+
+small {font-size: 85%;}
+strong {font-weight: bold;}
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* Monospaced elements */
+
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+pre {white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word;}
+
+/* Hand cursor on clickable elements */
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Clearfix */
+
+.clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
+
+/*
+
+
+Grid
+
+
+*/
+
+.row {
+	margin-left: -10px; /* gutter */
+}
+
+.col {
+	border-left: 10px solid transparent; /* gutter */
+	float: left;
+	display: block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 740px) {
+	.lg-12 { width: 100%; }
+	.lg-11 { width: 91.66666667%; }
+	.lg-10 { width: 83.33333333%; }
+	.lg-9  { width: 75%; }
+	.lg-8  { width: 66.66666667%; }
+	.lg-7  { width: 58.33333333%; }
+	.lg-6  { width: 50%; }
+	.lg-5  { width: 41.66666667%; }
+	.lg-4  { width: 33.33333333%; }
+	.lg-3  { width: 25%; }
+	.lg-2  { width: 16.66666667%; }
+	.lg-1  { width: 8.33333333%; }
+}
+
+@media screen and (max-width: 739px) {
+	.col { margin-top: 30px; }
+	.md-12 { width: 100%; }
+	.md-11 { width: 91.66666667%; }
+	.md-10 { width: 83.33333333%; }
+	.md-9  { width: 75%; }
+	.md-8  { width: 66.66666667%; }
+	.md-7  { width: 58.33333333%; }
+	.md-6  { width: 50%; }
+	.md-5  { width: 41.66666667%; }
+	.md-4  { width: 33.33333333%; }
+	.md-3  { width: 25%; }
+	.md-2  { width: 16.66666667%; }
+	.md-1  { width: 8.33333333%; }
+}
+
+@media screen and (max-width: 499px) {
+	.col { margin-top: 30px; }
+	.sm-12 { width: 100%; }
+	.sm-11 { width: 91.66666667%; }
+	.sm-10 { width: 83.33333333%; }
+	.sm-9  { width: 75%; }
+	.sm-8  { width: 66.66666667%; }
+	.sm-7  { width: 58.33333333%; }
+	.sm-6  { width: 50%; }
+	.sm-5  { width: 41.66666667%; }
+	.sm-4  { width: 33.33333333%; }
+	.sm-3  { width: 25%; }
+	.sm-2  { width: 16.66666667%; }
+	.sm-1  { width: 8.33333333%; }
+}
+
+/*
+
+
+Buttons and Forms
+
+
+*/
+
+input,select,textarea {
+	display: block;
+	margin-bottom: 15px;
+	padding: 10px;
+	outline: none;
+	border: 1px #ccc solid;
+	border-radius: 3px;
+	width: 240px;
+}
+
+textarea { width: 100%; }
+label { width: 100px; display: inline-block; line-height: 40px; cursor: default; }
