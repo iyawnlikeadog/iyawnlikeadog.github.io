@@ -11,19 +11,16 @@ html
     link(rel='shortcut icon', href='img/favicon.ico')
 
     link(rel='stylesheet', type='text/css', href='css/reset.css')
-    link(rel='stylesheet', type='text/css', href='css/preloader.css')
+    link(rel='stylesheet', type='text/css', href='css/fx.css')
     link(rel='stylesheet', type='text/css', href='css/fontello.css')
     link(rel='stylesheet', type='text/css', href='css/compiled/animate.custom.min.css')
     link(rel='stylesheet', type='text/css', href='css/compiled/style.css')
     //- link(rel="stylesheet", type="text/css", href="css/owl.carousel.css")
 
-    script(type='text/javascript', src='js/libs/jquery-2.1.4.min.js')
-    script(type='text/javascript', src='js/libs/prefixfree.min.js')
-    script(type='text/javascript', src='js/libs/wow.min.js')
-    script(type='text/javascript', src='js/frontpage.js')
+
+    //- script(type='text/javascript', src='js/frontpage.js')
     //- script(type='text/javascript', src='js/libs/parallax.js')
     //- script(type='text/javascript', src='js/libs/matchHeight.min.js')
-    script(type='text/javascript', src='js/main.js')
 
 body
   
@@ -32,19 +29,25 @@ body
     div.cube2
     
   div#bgx
-  div.noise
-  div.canvas-wrapper
-  img(src='img/avatar.jpg',class='avatar')
-      
+  div#noise
+  div#particles-js
+
   div#wrapper
     //- img(src='img/topicons.png')
     //- img(src='img/demobuttons.png',class='demobuttons')
     
     section#intro
-        
-      h2 Hi! My name is
-      h1 Ildar
-      h2 I'm designer & web developer
+      
+      div(class="central wow bounce animated",data-wow-iteration="infinite",data-wow-duration="3s")
+        img(src='img/avatar.jpg',class='avatar')
+        br
+        h2 Hello World! <span class="btwn"></span> My name is
+        br
+        h1(class="glitch",data-text="ILDAR") Ildar
+        br
+        h2(style="margin-top:-6px;") I'm designer & web developer
+          
+      span(class="icon-down-open wow pulse animated",data-wow-iteration="infinite",data-wow-duration="2s")
         
       //- ul.menu
       //-   li.active About Me
@@ -52,7 +55,6 @@ body
       //-   li Projects
       //-   li Contacts
       
-      span(class="icon-down-open wow pulse animated",data-wow-iteration="infinite",data-wow-duration="2s")
         
     section#top
       h3 Hi! I'm
@@ -80,4 +82,15 @@ body
 
     section#works
       
-    //- script(type='text/javascript', src='http://localhost:35729/livereload.js')
+    section#testimonials
+      h3 Testimonials
+      p You are a genious! (c) Mom
+      p Shut up and take my money! (c) An impressed client
+      p The design sucks. We want a blue text on a red background with a green shadow! (c) Not so impressed client
+      
+  script(type='text/javascript', src='js/libs/jquery-2.1.4.min.js')
+  script(type='text/javascript', src='js/libs/prefixfree.min.js')
+  script(type='text/javascript', src='js/libs/wow.min.js')
+  script(type='text/javascript', src='js/libs/particles.min.js')
+  script(type='text/javascript', src='js/particles-config.js')
+  script(type='text/javascript', src='js/main.js')

@@ -8,28 +8,86 @@ $(window).load(function(){
 
 $(document).ready(function(){
 
-	var win_w = $(window).width();
-	var win_h = $(window).height();
-	var central_h = $('#intro > .central').height();
-
-	$('#intro > .central').css('margin-top', - central_h/2 - 37);
-	$('#intro').height(win_h);
-
+	var win_w, win_h;
 	var movementStrength = 60;
-	var height = movementStrength / $(window).height();
-	var width = movementStrength / $(window).width();
-	$('#bgx').css('background-size', (win_w + 60) + 'px ' + (win_h + 60) + 'px');
+	var moveHeight, moveWidth;
+
+	// adjust stuff
+
+	function resizeStuff() {
+
+		win_w = $(window).width();
+		win_h = $(window).height();
+
+		// ILDAR font-size
+		if (win_w < 365) {
+			$('h1.glitch').css('font-size', Math.round((win_w-10) / 4) );
+		} else {
+			$('h1.glitch').css('font-size','');
+		}
+
+		// center vertically .central
+		var central_h = $('#intro > .central').height();
+		$('#intro > .central').css('margin-top', - central_h/2 - 37);
+
+		// section#intro height 100%
+		$('#intro').height(win_h);
+
+		// background size
+		$('#bgx').css('background-size', (win_w + 60) + 'px ' + (win_h + 60) + 'px');
+
+		//background movement stuff
+
+		moveWidth = movementStrength / win_w;
+		moveHeight = movementStrength / win_h;
+
+	}
+
+	resizeStuff();
+
+	$(window).resize(function() {
+		resizeStuff();
+	});
+
+	// background movement
 
 	$('body').on('mousemove', function(e){
+
 		var pageX = e.clientX - win_w / 2;
-
 		var pageY = e.clientY - win_h / 2;
-		var newvalueX = width * pageX * -1 - 30;
-		var newvalueY = height * pageY * -1 - 30;
+		var newvalueX = moveWidth * pageX * -1 - 30;
+		var newvalueY = moveHeight * pageY * -1 - 30;
 
-		$('#bgx').css("background-position", newvalueX+"px     "+newvalueY+"px");
+		$('#bgx').css("background-position", newvalueX + "px " + newvalueY + "px");
 
 	});
+
+	// var timer;
+	// var refresh_time = 250;
+	// var x = 0;
+	//
+	// $('body').mousemove(function(e) {
+	//   if (timer)
+	//     clearTimeout(timer);
+	//     timer = setTimeout(function(){
+	//       var mouse_x = e.clientX;
+	//       if(mouse_x != x){
+	//         x = mouse_x;
+	//
+	// 				var pageX = e.clientX - win_w / 2;
+	// 				var pageY = e.clientY - win_h / 2;
+	// 				var newvalueX = width * pageX * -1 - 30;
+	// 				var newvalueY = height * pageY * -1 - 30;
+	//
+	// 				$('#bgx').animate({
+	// 					backgroundPositionX: newvalueX,
+	// 					backgroundPositionY: newvalueY
+	// 				}, 250);
+	//
+	//       }
+	//     }, refresh_time);
+	// });
+
 
 
 	// Set header height equal window's height

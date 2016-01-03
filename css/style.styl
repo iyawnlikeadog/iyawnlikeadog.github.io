@@ -5,6 +5,7 @@ link-hover = #5ac8f4
 dark-bg    = #29292C
 
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800"
+@import "https://fonts.googleapis.com/css?family=Monoton"
 
 html
 	height 100%
@@ -19,23 +20,12 @@ body
 	// background #DDE2E6
 	// background-size cover
 	color #999
-	min-width 320px
+	min-width 100px
 	height 100%
 	overflow hidden
 	// overflow-y scroll
 	// background:url('https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/0/8/8905/red-rocks-park-o.jpg') -25px -50px;
 
-::-webkit-scrollbar
-	width 8px
-
-::-webkit-scrollbar-track
-	border-radius 10px
-
-::-webkit-scrollbar-thumb
-	background rgba(255,255,255,0.3)
-	border 1px rgba(255,255,255,0.5) solid
-	box-shadow 0 2px 3px rgba(0,0,0,0.1)
-	border-radius 2px
 
 #bgx
 	background #000 url(../../img/bgx.jpg) top center no-repeat fixed
@@ -117,16 +107,34 @@ table
 
 // structure
 
+// #topp
+// 	height 0
+// 	position relative
+// 	overflow visible
+// 	color #fff
+// 	z-index 2
+
 #wrapper
-	// z-index 0
-	margin 0 auto
-	// box-shadow 0 0 15px rgba(0,0,0,.15)
-	// overflow hidden
+	// margin 8px
 	position relative
 	width 100%
 	height 100%
 	overflow-y scroll
-	// padding-right 60px
+	overflow-x hidden
+	border-left 8px transparent solid
+
+::-webkit-scrollbar
+	width 8px
+
+::-webkit-scrollbar-track
+	border-radius 10px
+
+::-webkit-scrollbar-thumb
+	background rgba(255,255,255,0.3)
+	border 1px rgba(255,255,255,0.5) solid
+	box-shadow 0 2px 3px rgba(0,0,0,0.1)
+	border-radius 2px
+
 
 	// &:after
 	// 	content ""
@@ -147,13 +155,13 @@ table
 		width 60px
 		height auto
 
-.noise, .canvas-wrapper
+#noise, #particles-js
 	position fixed
 	width 100%
 	height 100%
 	top 0
 	right 8px
-	z-index 1
+	z-index 0
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -161,7 +169,7 @@ table
 	-ms-user-select: none;
 	user-select: none;
 
-.noise
+#noise
 	background url(../../img/static_animated.gif) 0 0 repeat
 	opacity 0
 
@@ -178,28 +186,29 @@ section
 	&:last-of-type
 		margin-bottom 80px
 
-
-img.avatar
-	z-index 2
-	// display inline-block
-	position absolute
-	left 50%
-	top 50%
-	margin -65px 0 0 -65px
-	width 130px
-	height 130px
-	border-radius 50%
-	border 3px rgba(#ffffff, 0.8) solid
-	// opacity 0.5
+// intro
 
 #intro
 	position relative
-	padding 0 30px
-	text-align center
+	padding 0 10px
 	color #fff
 	background transparent
 	border-top-left-radius 2px
-	z-index 0
+
+	.central
+		text-align center
+		position relative
+		top 50%
+
+		> * { display: inline-block; margin: 0 auto; color: #fff; }
+		h1 { font-family: 'Monoton'; font-weight: 400; }
+		.btwn { display: inline-block; width: 49px; }
+
+		img.avatar
+			width 130px
+			height 130px
+			border-radius 50%
+			border 3px rgba(#ffffff, 0.8) solid
 
 	.icon-down-open
 		display block
@@ -211,16 +220,14 @@ img.avatar
 		border 3px #fff solid
 		border-radius 50%
 		position absolute
-		bottom 30px
 		left 50%
+		bottom 40px
 		margin-left -19px
 		cursor pointer
-
-	h1, h2, h3
-		color #fff
-
-	p,b
-		padding 0 30px
+		transition-duration .3s
+		&:hover
+			color #D86DB3
+			border-color #D86DB3
 
 	ul
 		li
@@ -371,3 +378,11 @@ img.avatar
 
 	section
 		margin-left 0
+
+@media screen and (max-width: 370px)
+
+	h2
+		font-size 18px
+
+	.btwn
+		width 0!important
