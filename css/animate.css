@@ -1231,7 +1231,7 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-
+*/
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -1264,7 +1264,7 @@
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
-
+/*
 @-webkit-keyframes fadeInDownBig {
   from {
     opacity: 0;
@@ -1694,7 +1694,7 @@
   -webkit-animation-name: fadeOutRightBig;
   animation-name: fadeOutRightBig;
 }
-
+*/
 @-webkit-keyframes fadeOutUp {
   from {
     opacity: 1;
@@ -1723,7 +1723,7 @@
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
 }
-
+/*
 @-webkit-keyframes fadeOutUpBig {
   from {
     opacity: 1;

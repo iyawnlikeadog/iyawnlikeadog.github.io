@@ -8,7 +8,7 @@ $(window).load(function(){
 
 $(document).ready(function(){
 
-	var win_w, win_h;
+	var win_w, win_h, isMobile;
 	var movementStrength = 60;
 	var moveHeight, moveWidth;
 
@@ -18,6 +18,14 @@ $(document).ready(function(){
 
 		win_w = $(window).width();
 		win_h = $(window).height();
+
+		// isMobile true false
+
+		if (win_w > 600) {
+			isMobile = false;
+		} else {
+			isMobile = true;
+		}
 
 		// ILDAR font-size
 		if (win_w < 365) {
@@ -62,6 +70,77 @@ $(document).ready(function(){
 
 	});
 
+	// Audio
+
+	var pp = $('#playPause');
+	var audio = $('#music');
+	audio[0].src = 'mp3/ridersOnTheStorm.mp3';
+
+	// Bind class changing
+
+	$(pp).on('classChanged', function() {
+		if ( $(this).hasClass('paused') ) {
+			$(this).find('.icon-volume-off').removeClass('fadeOutUp' ).addClass('animated fadeInDown');
+			$(this).find('.icon-volume-up' ).removeClass('fadeInDown').addClass('animated fadeOutUp' );
+		} else {
+			$(this).find('.icon-volume-off').removeClass('fadeInDown').addClass('animated fadeOutUp' );
+			$(this).find('.icon-volume-up' ).removeClass('fadeOutUp' ).addClass('animated fadeInDown');
+		}
+	});
+
+	// Autoplay for desktops
+
+	if ( isMobile == false ) {
+		$(pp).removeClass('paused').trigger('classChanged');
+		audio[0].play();
+	} else {
+		$(pp).addClass('paused').trigger('classChanged');
+	}
+
+	// Play/Pause
+
+	function playPause() {
+
+		if (	$(pp).hasClass('paused') ) {
+
+			// Visual feedback
+			$(pp).removeClass('paused').trigger('classChanged');
+
+			// Play
+			audio[0].play();
+			audio.stop().animate({volume: 1}, 500);
+
+    } else {
+
+			// Visual feedback
+			$(pp).addClass('paused').trigger('classChanged');
+
+			//Pause
+			audio.stop().animate({volume: 0}, 500, function() {
+				if ( $(pp).hasClass('paused') ) {
+					audio[0].pause();
+				}
+			});
+
+     }
+	}
+
+	// Play/Pause button click
+
+	$('body').on('click', '#playPause', function() {
+		playPause();
+	});
+
+	// Scroll down
+
+	$('body').on('click', '.icon-down-open', function() {
+		$('#wrapper').animate({
+			scrollTop: win_h + 1
+			// scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 500);
+		return false;
+	});
+
 	// var timer;
 	// var refresh_time = 250;
 	// var x = 0;
@@ -89,18 +168,6 @@ $(document).ready(function(){
 	// });
 
 
-
-	// Set header height equal window's height
-
-	// $('.icon-down-open').css('top', win_h - 80);
-	// var $h = $(window).height();
-
-	// $('#top').css('margin-top', win_h);
-
-//
-//	$(window).resize(function() {
-//		$('header').height($h);
-//	});
 
 
 
@@ -140,12 +207,12 @@ $(document).ready(function(){
 
 	// Smooth scrolling to anchor
 
-	$('a.scroll').click(function(){
-		$('html, body').animate({
-			scrollTop: $( $.attr(this, 'href') ).offset().top
-		}, 500);
-		return false;
-	});
+	// $('a.scroll').click(function(){
+	// 	$('html, body').animate({
+	// 		scrollTop: $( $.attr(this, 'href') ).offset().top
+	// 	}, 500);
+	// 	return false;
+	// });
 
 
 

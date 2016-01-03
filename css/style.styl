@@ -173,6 +173,38 @@ table
 	background url(../../img/static_animated.gif) 0 0 repeat
 	opacity 0
 
+#playPause
+	position absolute
+	z-index 3
+	top 30px
+	right 68px
+	color rgba(#ffffff, 0.75)
+	> span
+		animation-duration: .2s;
+		opacity 0
+		display block
+		position absolute
+		top 0
+		left 0
+		text-align center
+		font-size 28px
+		width 38px
+		height 38px
+		line-height 38px
+
+#playPause,
+.icon-down-open
+	cursor pointer
+	transition-duration .3s
+
+#playPause:hover,
+.icon-down-open:hover
+	box-shadow 0 0 10px #D86DB3
+	text-shadow 0 0 15px #ff50c3
+	&#playPause:hover
+		color #fff
+		box-shadow none
+
 // sections
 
 section
@@ -223,11 +255,6 @@ section
 		left 50%
 		bottom 40px
 		margin-left -19px
-		cursor pointer
-		transition-duration .3s
-		&:hover
-			color #D86DB3
-			border-color #D86DB3
 
 	ul
 		li
@@ -370,14 +397,13 @@ section
 
 // mobile
 
-@media screen and (max-width: 750px)
+@media screen and (max-width: 600px)
 
-	aside
-		width 100%
-		position relative
+	::-webkit-scrollbar
+		width 0
 
-	section
-		margin-left 0
+	#wrapper
+		border-left none
 
 @media screen and (max-width: 370px)
 

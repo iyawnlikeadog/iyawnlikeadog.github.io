@@ -7151,6 +7151,36 @@
       "css": "down-open",
       "code": 33,
       "src": "fontawesome"
+    },
+    {
+      "uid": "d870630ff8f81e6de3958ecaeac532f2",
+      "css": "left-open",
+      "code": 34,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "399ef63b1e23ab1b761dfbb5591fa4da",
+      "css": "right-open",
+      "code": 35,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fe6697b391355dec12f3d86d6d490397",
+      "css": "up-open",
+      "code": 36,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "8pcqxtjxtvkqo3dgemy49z7fw1d8xsh9",
+      "css": "volume-off",
+      "code": 37,
+      "src": "modernpics"
+    },
+    {
+      "uid": "rrb2e7qiu68cw7itzq0wzm2hugw1u4lu",
+      "css": "volume-up",
+      "code": 38,
+      "src": "modernpics"
     }
   ]
 }
