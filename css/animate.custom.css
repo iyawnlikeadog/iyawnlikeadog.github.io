@@ -1,4 +1,4 @@
-/* minifyOnSave, filenamePattern: compiled/$1.custom.min.$2 */
+/* minifyOnSave, filenamePattern: compiled/$1.min.$2 */
 
 @charset "UTF-8";
 
@@ -634,7 +634,7 @@
   -webkit-transform-origin: center;
   transform-origin: center;
 }
-
+*/
 @-webkit-keyframes bounceIn {
   from, 20%, 40%, 60%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -753,7 +753,7 @@
     transform: none;
   }
 }
-
+/*
 @keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -1206,7 +1206,7 @@
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
 }
-
+*/
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -1231,7 +1231,7 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
-*/
+
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -1429,7 +1429,7 @@
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
 }
-
+*/
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1462,7 +1462,7 @@
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-
+/*
 @-webkit-keyframes fadeInUpBig {
   from {
     opacity: 0;
@@ -1495,7 +1495,7 @@
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
 }
-
+*/
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -1520,7 +1520,7 @@
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
-
+/*
 @-webkit-keyframes fadeOutDown {
   from {
     opacity: 1;
@@ -2686,7 +2686,7 @@
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
-
+*/
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
@@ -2833,7 +2833,7 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
   }
 }
-
+/*
 .zoomInRight {
   -webkit-animation-name: zoomInRight;
   animation-name: zoomInRight;

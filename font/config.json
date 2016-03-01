@@ -37,9 +37,9 @@
     {
       "uid": "a7b13d6823bb30774482083852f1434a",
       "css": "mail-alt",
-      "code": 59411,
+      "code": 59395,
       "src": "custom_icons",
-      "selected": false,
+      "selected": true,
       "svg": {
         "path": "M0 839V396Q25 424 56 445 258 582 334 637 366 661 385 674T438 701 499 714H501Q529 714 562 701T615 674 666 637Q761 569 944 445 976 423 1000 396V839Q1000 876 974 902T911 929H89Q53 929 26 902T0 839ZM0 244Q0 201 23 172T89 143H911Q947 143 973 169T1000 232Q1000 276 973 316T905 385Q695 531 643 566 638 570 620 583T590 605 561 623 528 638 501 643H499Q487 643 472 638T439 623 410 605 380 583 357 566Q306 531 210 465T96 385Q61 362 31 321T0 244Z",
         "width": 1000
@@ -7171,6 +7171,24 @@
       "src": "fontawesome"
     },
     {
+      "uid": "297fe6c2ef08198b03d706ba52f51b7f",
+      "css": "flight",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "38575a803c4da31ce20d77e1e1236bcb",
+      "css": "paper-plane",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "a19527dd18f0e45e597e8a2622604d14",
+      "css": "wifi",
+      "code": 59392,
+      "src": "typicons"
+    },
+    {
       "uid": "8pcqxtjxtvkqo3dgemy49z7fw1d8xsh9",
       "css": "volume-off",
       "code": 37,
@@ -7181,6 +7199,18 @@
       "css": "volume-up",
       "code": 38,
       "src": "modernpics"
+    },
+    {
+      "uid": "05ef9b5e8742971aa85b23cfcbe71594",
+      "css": "users",
+      "code": 59397,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "291e2e127efe7a6bc580af6d3ead3771",
+      "css": "location",
+      "code": 59396,
+      "src": "mfglabs"
     }
   ]
 }

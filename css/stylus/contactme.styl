@@ -1,0 +1,220 @@
+// out: ../compiled/contactme.min.css, compress: true, sourcemap: false
+
+#contactme
+
+	*
+		min-width 0!important
+		word-wrap break-word
+
+	.bg_pic
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background #000 url(../../img/bg_mist.jpg) center center no-repeat fixed
+		background-size cover
+		z-index 1
+
+	.bg_color
+		@extend #contactme .bg_pic
+		background #111
+		opacity 0.8
+
+	.container
+		height 100%
+		position relative
+		z-index 2
+
+	.subcontainer
+		height calc(100% - 100px)
+		margin 50px 30px
+		background #EEF0F2
+		overflow hidden
+
+	.row
+		margin-left 0
+
+	.col
+		margin 0
+		border-left none
+		height 100%
+		position relative
+
+	p.status
+		padding 30px
+		margin 0
+		box-shadow 0 0 3px rgba(#000, .3)
+		background rgba(#fff, .3)
+		color #9DA6B3
+		b
+			color #4d545d
+
+	#chat_sidebar
+		background #282F37
+		height 100%
+		color #97989B
+
+		p
+			padding 30px
+			margin 0
+			border-bottom 1px rgba(#fff, .05) solid
+			b
+				color #fff
+				font-weight 700
+			.icon-users
+				float right
+
+		.contact
+			border-left 5px solid #2B80FF
+			padding 15px 25px 15px 90px
+			position relative
+			transition-duration .3s
+			&:hover
+				background rgba(#fff, .05)
+
+			img
+				width 50px
+				width 50px
+				border-radius 50%
+				position absolute
+				left 25px
+				top 50%
+				margin-top -25px
+
+			span.name
+				color #fff
+				font-weight 600
+
+			span.text
+				line-height 18px
+				font-size 12px
+				display block
+
+	#chat
+		padding 25px
+		height calc(100% - 137px)
+		overflow-y auto
+
+	.msg
+		animation-delay .2s
+		animation-duration .5s
+		&:first-of-type
+			animation-delay 1.2s
+
+		> *
+			vertical-align top
+
+		.triangle
+			position relative
+			left -12px
+			top 8px
+			margin-bottom -10px
+			text-align left
+			transform rotate(90deg) skewX(-30deg) scale(1,.866)
+			&:before,
+			&:after
+				content ''
+				position absolute
+				background-color inherit
+			&:before
+				transform rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%)
+			&:after
+				transform rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%)
+
+		.triangle,
+		.triangle:before,
+		.triangle:after
+			width  10px
+			height 10px
+			border-top-right-radius 30%
+
+		span
+			display inline-block
+			max-width 330px
+			position relative
+			background #fff
+			padding 7px 12px
+			margin 7px 0 15px 0
+			border-radius 4px
+			color #333
+			font-size 13.33px
+
+		&.from_me
+			span
+				background #fff
+				margin-left 20px
+				// filter drop-shadow(0 1px 2px rgba(#000, .2))
+				// -webkit-filter drop-shadow(0 1px 2px rgba(#000, .2))
+			.triangle
+				background #fff
+			.ava
+				background url(../../img/avatar-me.jpg) 0 0 no-repeat
+
+		&.from_you
+			text-align right
+			span
+				background #39ACE6
+				color #fff
+				margin-right 20px
+				padding-left 2px
+				// filter drop-shadow(0 1px 2px rgba(#000, .2))
+				// -webkit-filter drop-shadow(0 1px 2px rgba(#000, .25))
+			.triangle
+				background #39ACE6
+				left inherit
+				float right
+				top 3px
+				right -12px
+				transform rotate(-90deg) skewX(-30deg) scale(1,.866)
+			.ava
+				background url(../../img/avatar-you.png) 0 0 no-repeat
+
+		.ava
+			background-size cover!important
+			display inline-block
+			width 50px
+			height 50px
+			border-radius 50%
+
+#sendmsg
+	font-size 0
+	position absolute
+	bottom 0
+	left 0
+	width 100%
+
+	input
+		border none
+		background #fff
+		border-top 2px #D5D8DA solid
+		border-radius 0
+		margin 0
+		padding 20px 25px
+		width 100%!important
+		color #6c7178
+
+	input[placeholder]          {color:#6c7178;}
+	::-webkit-input-placeholder {color:#6c7178;}
+	::-moz-placeholder          {color:#6c7178;}
+	:-moz-placeholder           {color:#6c7178;}
+	:-ms-input-placeholder      {color:#6c7178;}
+
+	button
+		position absolute
+		top 21px
+		right 25px
+		background none
+		border none
+		outline none!important
+		padding 0
+
+		span
+			font-size 18px
+			padding 0
+			color #84878c
+			transition-duration .3s
+			&:before
+				margin 0
+			&:hover
+				color #43474d

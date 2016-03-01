@@ -1,0 +1,59 @@
+// out: ../compiled/sections.min.css, compress: true, sourcemap: false
+
+section
+  width 100%
+  height 100%
+  z-index 2
+  position absolute
+  background #666
+  top 100%
+  left 0
+  transition-duration 1s
+  transition-timing-function easeInCubic
+
+  &.active
+    top 0
+
+  > div
+    height 100vh
+
+  &.dark
+    background #222
+  h6
+    color #fff
+  .container
+    max-width 960px
+    margin 0 auto
+  .half-container
+    max-width 480px
+  &.left
+    padding-left 30px
+
+// nav
+
+nav
+  position fixed
+  z-index 3
+  right 3%
+  top 50%
+  bottom auto
+  transform translateY(-50%)
+
+  span
+    cursor pointer
+    display block
+    height 40px
+    width 40px
+    overflow hidden
+    text-indent 100%
+    white-space nowrap
+    background url(../../img/cd-icon-arrow.svg) no-repeat center center
+
+    &.section-prev
+      transform rotate(180deg)
+      margin-bottom 10px
+
+    &.inactive
+      visibility hidden
+      opacity 0
+      transition opacity 0.2s 0s, visibility 0s 0.2s
