@@ -1,0 +1,46 @@
+var restart_animation, type_introducing;
+
+restart_animation = function(selector) {
+  var dom;
+  dom = $(selector);
+  dom.css({
+    'transform': 'translateZ(0) scale(1, 1)',
+    '-webkit-animation-name': 'none',
+    '-moz-animation-name': 'none',
+    '-ms-animation-name': 'none',
+    '-o-animation-name': 'none',
+    'animation-name': 'none'
+  });
+  return setTimeout(function() {
+    return dom.css({
+      '-webkit-animation-name': '',
+      '-moz-animation-name': '',
+      '-ms-animation-name': '',
+      '-o-animation-name': '',
+      'animation-name': ''
+    });
+  }, 0);
+};
+
+type_introducing = function(delay_off) {
+  var delay, i, len, letter, results, text_to_type, time;
+  $('#hello h3').empty();
+  $('#hello h1.glitch').attr('data-content', lang_array['hello_world']);
+  text_to_type = lang_array['greetings'];
+  if (delay_off) {
+    delay = 0;
+  } else {
+    delay = 1;
+  }
+  results = [];
+  for (i = 0, len = text_to_type.length; i < len; i++) {
+    letter = text_to_type[i];
+    time = Math.random() * (0.20 - 0.06) + 0.06;
+    delay += time;
+    if (letter === " ") {
+      letter = "&nbsp;";
+    }
+    results.push($('#hello h3').append("<span class='animated fadeIn' style='animation-delay:" + delay + "s;animation-duration:0s;'>" + letter + "</span>"));
+  }
+  return results;
+};

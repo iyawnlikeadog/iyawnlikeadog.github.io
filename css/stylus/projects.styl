@@ -1,0 +1,165 @@
+// main: style.styl
+
+$g  = 30px
+$br = 2px
+
+#projects
+
+	.section-inner
+		height calc(100vh - 40px)
+		position relative
+
+	.container
+		@extend .clearfix
+		text-align right
+		height inherit
+
+	// every slide
+
+	.owl-item
+		height calc(100vh - 40px)
+		.slide
+			height calc(100vh - 40px)
+		.container
+			max-width 1140px
+			// top 50%
+		// 	position relative
+		// 	transform translateY(-50%)
+
+	// first slide
+
+	.owl-item:first-of-type
+		.container
+			max-width 1060px
+
+	img.brush-stroke
+		width 80%
+		height auto
+		margin-bottom -78px
+		float left
+
+	div.float-right
+		text-align right
+		max-width 700px
+		float right
+		p
+			color $light-text
+			float right
+			margin-bottom 20px
+		h4
+			text-transform uppercase
+			letter-spacing 4.6px
+
+	// other slides
+
+	// img.swipe
+	// 	display inline-block
+	// 	height 38px
+	// 	margin-left -15px
+	// 	top 1px
+	// 	position relative
+	//
+	// .swipe-active
+	// 	content ""
+	// 	display inline-block
+	// 	position absolute
+	// 	top 3px
+	// 	right 0
+	// 	width 40px
+	// 	height 40px
+	// 	border 4px #000 solid
+	// 	border-radius 50%
+	// 	transform scale(0, 0)
+	// 	transition-duration 0s
+	// 	opacity 0.4
+	// 	&.active
+	// 		transition-duration .5s
+	// 		transform scale(3, 3)
+	// 		opacity 0
+
+	.row { margin-left: -+$g }
+	.col { border-width: $g }
+
+	.item
+		line-height 0
+		border-radius $br
+		// box-shadow 0 1px 2px rgba(#000, .04), 0 2px 8px rgba(#000, .02)
+
+		p, h4 { cursor: default }
+
+		.img-caption
+			// border 2px #fff solid
+			position relative
+			overflow hidden
+			z-index 1
+			border 5px #fff solid
+			// border-top-left-radius $br
+			// border-top-right-radius $br
+
+		img
+			transition-duration .5s
+			&.blurred
+				transition-duration 10s
+				// -webkit-filter blur(3px)
+				// -moz-filter blur(3px)
+				// -o-filter blur(3px)
+				// -ms-filter blur(3px)
+				// filter blur(3px)
+				transform scale(2,2)
+
+		.caption
+			position absolute
+			width 100%
+			height 100%
+			top 0
+			left 0
+			background rgba(#111, .8)
+			opacity 0.000001 // not 0 cuz it doesn't update language properly then
+			transition-duration .3s
+			padding 20px
+			display flex
+			flex-direction column
+			justify-content center
+			&:hover
+				opacity 1
+				.icon-link
+					transform rotate(180deg)
+			.inner-caption
+				text-align center
+				// top 50%
+				// transform translateZ(0) translateY(-50%)
+				p
+					color #fff
+					font-size 15px
+					line-height 20px
+					cursor pointer
+				.icon-link
+					display block
+					font-size 44px
+					margin-top 1px
+					margin-bottom 10px
+					color #fff
+					transition-duration .5s
+
+		.name
+			margin-top 5px
+			text-transform uppercase
+		// 	background #fff
+		// padding 9px 20px 11px 20px
+		// 	text-align center
+		// 	line-height 28px
+		// 	border-bottom-left-radius $br
+		// 	border-bottom-right-radius $br
+		// 	h4
+		// 		color #808080
+		// 		line-height 28px
+
+	#carousel
+		.item
+			.inner-item
+				padding 40px
+				animation-duration 1s
+				.caption
+					opacity 0
+					transition-delay .5s
+					transition-duration .5s

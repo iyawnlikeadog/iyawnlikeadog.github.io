@@ -1,4 +1,4 @@
-/* minifyOnSave, filenamePattern: compiled/$1.min.$2 */
+ /* minifyOnSave, filenamePattern: compiled/$1.min.$2 */
 
 @charset "UTF-8";
 
@@ -1297,7 +1297,7 @@
   -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
 }
-
+*/
 @-webkit-keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -1330,7 +1330,7 @@
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
-
+/*
 @-webkit-keyframes fadeInLeftBig {
   from {
     opacity: 0;
@@ -1363,7 +1363,7 @@
   -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
 }
-
+*/
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
@@ -1396,7 +1396,7 @@
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
-
+/*
 @-webkit-keyframes fadeInRightBig {
   from {
     opacity: 0;
@@ -1433,8 +1433,8 @@
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
 
   to {
@@ -1447,8 +1447,8 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
 
   to {
@@ -1520,6 +1520,33 @@
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
+
+
+@-webkit-keyframes fadeOut2 {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut2 {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut2 {
+  -webkit-animation-name: fadeOut2;
+  animation-name: fadeOut2;
+}
+
 /*
 @-webkit-keyframes fadeOutDown {
   from {
