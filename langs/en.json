@@ -1,0 +1,35 @@
+{
+	"hello_world": "HELLO \u0020 WORLD",
+	"greetings": "My name is Ildar. I code and design",
+	"choose_language": "Choose language",
+
+	"about_h2": "ABOUT \u0020 ME",
+	"about_h3": "& stuff which I do",
+	"about_p1": "I'm 25 years old designer and web-developer currently located in Karaganda, Kazakhstan.",
+	"about_p2": "I started learning graphics and image editing software in <span class='date' hint='More than 13 years ago'>2003</span>. Since then I designed almost everything what can be designed: <i>websites, applications, products and packages, printing arts, etc.</i>",
+	"about_p0": "In <span class='date' hint='More than 5 years ago'>2011</span> I realized that making things look good wasn't enough for me. I wanted to make them work. I started learning web and programming and it became my new passion. Every new line of code is a piece of art for me. I always keep my code as simple as possible, perfectly structured, optimized and readable.",
+	"about_p3": "Few years later, in <span class='date' hint='More than 5 years ago'>2011</span> I started learning coding and web development and it became my new passion. By now I have worked on projects for a range of clients from small entrepreneurs to huge corporations and governments. I got used to keep every line of code as simple as possible, perfectly structured, optimized and readable.",
+	"about_button": "Go to skills",
+
+	"skills_h2": "MY \u0020 SKILLS",
+	"skills_h3": "& Technologies I use",
+	"skills_side_h3": "Not enough?",
+	"skills_side_p": "If you're looking for some extra skills and knowledges you should know that I always enjoy learning new things. I find projects with some professinal and personal growth potential more attractive.",
+	"skills_button": "See my portfolio",
+
+	"projects_h2": "PROJECTS",
+	"projects_h3": "I have worked on",
+	"projects_h4": "Swipe left to see my portfolio",
+
+	"contact_h1": "HIRE \u0020 ME",
+	"contact_h3": "Let's work together",
+	"contact_col1": "Karaganda, KZ",
+	"contact_col2": "Work remotely",
+	"contact_col3": "Ready for relocation",
+	"name": "Your name",
+	"mail": "Your e-mail",
+	"msg": "Your message",
+	"send": "Send",
+	"sent": "Sent",
+	"error": "Error"
+}
