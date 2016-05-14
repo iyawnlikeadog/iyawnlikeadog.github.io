@@ -1,0 +1,100 @@
+{
+	"0": {
+		"class"  : "zenotes",
+		"name_en": "ZENotes",
+		"desc_en": "Beautiful modern application built using Node-Webkit and AngularJS for Windows, OS X and Linux",
+		"name_ru": "ZENotes",
+		"desc_ru": "Современное приложение, построенное с использованием Node-Webkit и AngularJS для Windows, OS X и Linux"
+	},
+	"1": {
+		"class"  : "dispatcher",
+		"name_en": "Dispatcher",
+		"desc_en": "Website of a transport company with custom tracking system",
+		"name_ru": "Диспетчер",
+		"desc_ru": "Вебсайт транспортной компании с кастомной системой трекинга"
+	},
+	"2":{
+		"class"  : "lifeservice",
+		"name_en": "Life Service",
+		"desc_en": "Multi servising company website",
+		"name_ru": "Life Service",
+		"desc_ru": "Вебсайт многопрофильной компании"
+	},
+	"3":{
+		"class"  : "exl",
+		"name_en": "EXL Design Studio",
+		"desc_en": "Design studio website",
+		"name_ru": "Студия дизайна EXL",
+		"desc_ru": "Вебсайт студии дизайна"
+	},
+	"4":{
+		"class"  : "foxytabs",
+		"name_en": "Foxy Tabs",
+		"desc_en": "Awesome Google Chrome extension",
+		"name_ru": "Foxy Tabs",
+		"desc_ru": "Расширение для Google Chrome"
+	},
+	"5":{
+		"class"  : "perekucity",
+		"name_en": "Perekucity",
+		"desc_en": "Food delivery company website",
+		"name_ru": "Perekucity",
+		"desc_ru": "Вебсайт службы доставки еды"
+	},
+	"6":{
+		"class"  : "subsonicvoodoo",
+		"name_en": "Subsonic Voodoo",
+		"desc_en": "Personal musical project website",
+		"name_ru": "Subsonic Voodoo",
+		"desc_ru": "Сайт персонального музыкального проекта"
+	},
+	"7":{
+		"class"  : "copacabana",
+		"name_en": "Copacabana",
+		"desc_en": "Food delivery company website",
+		"name_ru": "Copacabana",
+		"desc_ru": "Вебсайт службы доставки еды"
+	},
+	"8":{
+		"class"  : "sevenpalace",
+		"name_en": "Seven Palace",
+		"desc_en": "Residential complex in Astana, KZ website",
+		"name_ru": "Семь Палат",
+		"desc_ru": "Вебсайт жилого комплекса в Астане"
+	},
+	"9":{
+		"class"  : "musica",
+		"name_en": "Musica.js",
+		"desc_en": "jQuery media player",
+		"name_ru": "Musica.js",
+		"desc_ru": "Мультимедийный плеер на jQuery"
+	},
+	"10":{
+		"class"  : "zangovkz",
+		"name_en": "zan.gov.kz",
+		"desc_en": "App giving access to tens of thousands of legal acts and statutes",
+		"name_ru": "zan.gov.kz",
+		"desc_ru": "Приложение для доступа к десяткам тысяч правовых актов"
+	},
+	"11":{
+		"class"  : "dw",
+		"name_en": "Deluxe Watches",
+		"desc_en": "Webstore with custom lightweight and blazing fast admin panel",
+		"name_ru": "Deluxe Watches",
+		"desc_ru": "Интернет магазин с кастомной легкой и ультрабыстрой админ панелью"
+	},
+	"12":{
+		"class"  : "tshop",
+		"name_en": "T-Shop",
+		"desc_en": "Modern webstore",
+		"name_ru": "T-Shop",
+		"desc_ru": "Современный интернет магазин"
+	},
+	"13":{
+		"class"  : "wasabi",
+		"name_en": "Wasabi",
+		"desc_en": "Japanese food delivery company website",
+		"name_ru": "Wasabi",
+		"desc_ru": "Вебсайт службы доставки японской еды"
+	}
+}

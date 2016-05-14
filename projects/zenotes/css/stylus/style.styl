@@ -1,0 +1,272 @@
+// out: ../compiled/style.min.css, compress: true, sourcemap: true
+
+$gutter       = 30px
+$md           = 740px
+$sm           = 499px
+$link-color   = #32acdd
+$link-hover   = #5ac8f4
+$focus-color  = #5ac8f4
+$select-color = #5F8FAF
+$grey         = #f5f5f5
+$grey2        = #F9F9F9
+$main-font    = 'Open Sans', Arial, Helvetica, sans-serif
+
+// imports
+
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic'
+@import 'https://fonts.googleapis.com/css?family=Crete+Round'
+@import 'reset'
+
+// style
+
+body
+	font 400 14px/22px $main-font
+	color #333738
+	background #bbb
+	min-width 320px
+
+h1, h2, h3, h4, h5, h6 { clear: both; font-weight: 400; margin-bottom: 10px; }
+h1 { font-size: 26px; line-height: (36/26); }
+// h2 { font-size: 33px; line-height: (36/24); font-weight: 600; }
+h2 { font-size: 33px; line-height: (36/24); font-weight: 400; font-family: 'Crete Round'; letter-spacing: .6px; }
+h3 { font-size: 16px; line-height: (24/22); font-weight: 600; }
+h4 { font-size: 20px; line-height: (24/20); font-weight: 300; }
+h5 { font-size: 18px; line-height: (24/18); }
+h6 { font-size: 16px; line-height: (24/16); }
+
+::selection { background: $select-color; color: #fff; text-shadow: none!important; }
+
+
+
+// Inputs, Buttons, Lists
+
+input, select, textarea
+	font 400 14px/18px $main-font
+	background #fff
+	vertical-align top
+	transition-duration .3s
+	&:focus
+		border-color $focus-color
+		box-shadow 0 0 1px $focus-color
+
+button, .button
+	outline none
+	border none
+	padding 10px 13px
+	border-radius 3px
+	text-transform uppercase
+	background $link-color
+	color #fff
+	font 600 12px/16px $main-font
+	transition-duration .3s
+		&:hover
+			background $link-hover
+			cursor pointer
+		span
+			margin-right 10px
+
+// ul.check li span { color: #86CB5C; padding-right: 5px; }
+// ul.star  li span { color: #ffc94f; padding-right: 5px; }
+
+.separator
+	height: 2px
+	width: 35px
+	background: #D2D5DA
+	margin: 56px auto
+
+/* Layout: sections -> containers */
+
+section { position: relative; }
+
+.container { padding: 30px; max-width: 1080px; margin: 0 auto; }
+
+#top
+	line-height 1.5
+	.logo
+		float left
+		font-size 24px
+		font-weight 700
+		margin-top -12px
+	nav
+		float right
+		ul
+			li
+				display inline-block
+				margin-left 30px
+				color #fff
+				font-weight 600
+				a
+					color #fff
+
+#intro
+	background url(../../img/bg.jpg) 50% 50% no-repeat
+	background-size cover
+	// min-height 100vh
+	text-align center
+	color #fff
+	line-height 0
+	overflow hidden
+
+	.container
+		padding-bottom 0
+
+	.text
+		margin 90px 0
+
+	h4
+		color rgba(#fff, .65)
+		margin-bottom 28px
+
+	button
+		padding 10px 25px
+		background transparent
+		border 1px rgba(#fff, .25) solid
+		margin 0 8px
+		transition-duration .3s
+		&:hover
+			background rgba(184, 207, 234, 0.33)
+			border-color rgba(255, 255, 255, 0.14)
+
+	img
+		border-radius 2px 2px 0 0
+		box-shadow 0px 0px 76px rgba(#000, .18)
+		position relative
+		// position absolute
+
+#os
+	background $grey
+	text-align center
+	// text-align right
+	.container
+		padding 40px 30px
+	span
+		font-size 30px
+		line-height 1
+		color #B1B8C1
+		margin 10px 0 0 25px
+		display inline-block
+		&:before
+			margin 0
+		&.text
+			display inline-block
+			margin 0 0 10px 0
+			font-weight 600
+			line-height 30px
+			font-size 15px
+			line-height 22px
+			color #9DA3AA
+	    text-transform uppercase
+	    letter-spacing 2.8px
+
+#features,
+#testimonials
+	.container
+		padding: 66px 30px 74px 30px
+
+#features
+	background $grey2
+	text-align center
+	// border-bottom 1px #EDF0F3 solid
+
+	h2
+		color #676D77
+
+	h4
+		color #A6A8AB
+		font-weight 400
+
+	span
+		color #81ACEA
+		margin-bottom 30px
+		display inline-block
+		background rgba(#fff, .9)
+		border-radius 50%
+		height 80px
+		width 80px
+		line-height 80px
+		// transform rotate(-22deg)
+		// line-height 76px
+		// border 2px #E7E9EC dashed
+		&.icon-doc-text,
+		&.icon-table
+			font-size 28px
+		&.icon-menu
+			font-size 34px
+		&.icon-code
+			font-size 30px
+
+	h3
+		text-transform uppercase
+		color #484848
+		margin-bottom 12px
+
+	p
+		color #6C6D6F
+
+#testimonials
+	// background: #FCFCFC
+	background: #2F363E
+	color: #fff
+	h2
+		margin-bottom: 0
+		line-height: 1.15
+	.separator
+		margin: 25px 0
+		background: #FF4F5C
+	p
+		color: #B1B1B1
+	.avatar
+		border-radius: 50%
+		width: 70px
+		height: auto
+		opacity: .7
+		position: absolute
+	div.speaks
+		// background: rgba(#fff, .07)
+		background: #3D434B
+		border-radius: 5px
+		padding: 18px 22px
+		h4
+			font-size: 16px
+			line-height: 24px
+			margin-bottom: 0
+			opacity: .8
+	svg
+		margin: 0 0 -4px 71px
+		display: block
+	p.company
+		margin-left: 85px
+	h3
+		margin: 18px 0 0 85px
+		font-size: 15px
+
+footer
+	background: #1A1E25
+	color: #858C94
+	text-align: center
+	font-weight: 600
+	.container
+		padding-bottom: 28px
+
+/* Mobile Version */
+
+@media screen and (max-width: $md)
+
+	.container
+		padding-left: 20px!important
+		padding-right: 20px!important
+
+	#features
+		.container
+			padding-bottom: 20px
+		.col
+			padding-bottom: 50px
+
+	.speaks
+		margin-top: 30px
+
+@media screen and (max-width: $sm)
+
+	.container
+		padding-left: 10px!important
+		padding-right: 10px!important

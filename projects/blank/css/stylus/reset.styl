@@ -1,0 +1,174 @@
+// main: style.styl
+
+// HTML5 Reset
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video
+	margin 0
+	padding 0
+	border 0
+	outline 0
+	font-size 100%
+	vertical-align baseline
+	background transparent
+
+article, aside, figure, footer, header, nav, section, details, summary { display: block; }
+
+// Border-Box
+
+*, *:before, *:after { box-sizing: border-box; }
+
+// Responsive images and other embedded objects
+
+img, object { max-width: 100%; height: auto; }
+
+// Other
+
+html { overflow-y: scroll; }
+body { overflow: hidden; }
+ul   { list-style: none; }
+
+blockquote, q
+	quotes none
+	&:before,
+	&:after
+		content ''
+		content none
+
+a
+	text-decoration none
+	color $link-color
+	transition-duration .2s
+	&:hover
+		color: $link-hover
+
+// Table still need cellspacing="0" in the markup
+
+table  { border-collapse: collapse; border-spacing: 0; font-size: inherit; font: 100%; }
+th     { font-weight: bold; vertical-align: bottom; }
+td     { font-weight: normal; vertical-align: top; }
+td img { vertical-align: top; }
+hr     { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+// Inputs
+
+input, select { vertical-align: middle; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; box-shadow: none!important; border: none!important; }
+button, input, select, textarea { margin: 0; }
+button, input[type=button] { width: auto; overflow: visible; }
+
+// Text
+
+small { font-size: 85%; }
+strong { font-weight: bold; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted #000; cursor: help; }
+
+// Monospaced elements
+
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+pre { white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+
+// Cursor pointer
+
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button
+	cursor pointer
+
+// Clearfix
+
+.clearfix
+	zoom 1
+	&:after
+		clear both
+	&:after,
+	&:before
+		content "\0020"
+		display block
+		height 0
+		overflow hidden
+
+// Grid
+
+.row
+	@extend .clearfix
+	margin-left -+$gutter
+
+	.col
+		border-left $gutter solid transparent
+		float left
+		display block
+		vertical-align top
+		box-sizing border-box
+
+// Media queries
+
+@media screen
+	for num in 1..12
+		.lg-{num}
+				width (100 * num / 12) + '%'
+
+@media screen and (max-width: $md - 1)
+	[class^="md-"]
+		margin-top $gutter
+	for num in 1..12
+		.md-{num}
+				width (100 * num / 12) + '%'
+
+@media screen and (max-width: $sm)
+	[class^="sm-"]
+		margin-top $gutter
+	for num in 1..12
+		.sm-{num}
+				width (100 * num / 12) + '%'
+
+// Buttons and Forms
+
+input, select, textarea
+	display block
+	margin-bottom 15px
+	padding 10px
+	outline: none
+	border 1px #ccc solid
+	border-radius 3px
+	width 100%
+
+label
+	width 100px
+	display inline-block
+	line-height 40px
+	cursor default
+
+// Antiblur
+
+.antiblur
+	filter blur(0)
+	-webkit-filter blur(0)
+	transform translateZ(0) scale(1, 1)
+
+// No select
+
+.noselect
+	-webkit-touch-callout none
+	-webkit-user-select none
+	-khtml-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
