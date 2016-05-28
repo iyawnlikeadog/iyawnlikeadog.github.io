@@ -4,46 +4,58 @@ doctype html
 html
 	head
 	
-		title ZENOtes :: Notes, tables, pieces of code and to do lists app
+		title ZENotes
+		meta(name="author" content="")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-		link(rel="shortcut icon" href="../@shared/img/favicon.ico")
+		link(rel="shortcut icon" href="img/favicon.ico")
 
-		link(rel="stylesheet" type="text/css" href="../@shared/css/animate.min.css")
+		link(rel="stylesheet" type="text/css" href="myframework/all.css")
 		link(rel="stylesheet" type="text/css" href="css/fontello.css")
 		link(rel="stylesheet" type="text/css" href="css/compiled/style.min.css")
 		
-		script(src="../@shared/js/jquery-2.1.4.min.js")
-		script(src="../@shared/js/prefixfree.min.js")
-		script(src="../@shared/js/my-parallax.jquery.js")
-		script(src="js/main.js")
+		script(src="myframework/all.js")
+		script(src="js/app.js")
 		
 	body
-	
-		section(id="intro" class="parallax-height" data-velocity="-.4")
+
+		// Header
+		
+		header.absolute
 			div.container
-				div#top.clearfix
-					span.logo ZENotes
-					nav
-						ul
-							li: a(href="#intro") Download
-							li: a(href="#features") Features
-							li: a(href="https://github.com/iyawnlikeadog/ZENotes" target="_blank") Source
-				div(class="text animated fadeIn")
-					h2 Keep all your notes and lists in one place
-					h4 ZENotes allows you to store html notes, to-do lists and code snippets
-					button Download
-					button Learn more
-				img(src="img/screenshot.png" class="parallax" data-velocity="-.2")
-				
+				a(href="#" id="logo") ZENotes
+				nav
+					ul
+						li: a(href="#intro" class="scroll") Download
+						li: a(href="#features" class="scroll") Features
+						li: a(href="https://github.com/iyawnlikeadog/ZENotes" target="_blank") Source
+					div.mobile-menu-button: #[div]#[div]#[div]
+					
+		// Intro
+
+		section(id="intro" class="parallax-height" data-velocity="-.4")
+				div.container
+					div(class="text animated fadeIn")
+						h2 Keep all your notes and lists in one place
+						h4 ZENotes allows you to store html notes, to-do lists and code snippets
+						button Download
+						button Learn more
+					img(src="img/screenshot.png" class="parallax" data-velocity="-.2")
+					
+		// OS
+					
 		section#os
 			div.container
-				//- button Download Now
 				span.text Built using Node-Webkit and AngularJS. Available for
 				span.icon-appstore
 				span.icon-win8
 				span.icon-linux
+				
+		// Features
 			
 		section#features
 			div.container
@@ -68,6 +80,8 @@ html
 						h3 Pieces of code
 						p Suspendisse pretium porttitor ligula a laoreet. Suspendisse faucibus sapien vitae lectus mollis, eget hendrerit turpis auctor.
 	
+		// Testimonials
+	
 		section#testimonials
 			div.container
 				div.row
@@ -79,10 +93,12 @@ html
 						div.speaks
 							h4 This is the shit! I suspendisse pretium porttitor ligula a laoreet. Suspendisse faucibus sapien vitae lectus mollis, eget hendrerit turpis auctor.
 						svg(height="20" width="15")
-							polygon(points="0 0, 15 0, 0 20" style="fill:#3D434B;stroke-width:0")
+							polygon(points="0 0, 15 0, 7.5 12" style="fill:#3D434B;stroke-width:0")
 						img(src="img/bill.jpg" class="avatar")
 						h3 Jill Bytes
 						p.company Windowsoft Corp.
+						
+		// Footer
 				
 		footer
 				div.container
