@@ -1,1 +1,0 @@
-var $=jQuery.noConflict();$(document).ready(function(){$("#signupform").parsley().on("form:submit",function(){return!1})});
