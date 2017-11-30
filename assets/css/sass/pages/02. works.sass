@@ -1,0 +1,77 @@
+// main: ../style.sass
+
++keyframes(blink)
+  0%, 50%, 100%
+    opacity: 1
+  25%, 75%
+    opacity: 0.3
+
+#works .container
+  padding-right: 0!important
+
+.works
+  @extend .clearfix
+  font-size: 0
+  line-height: 0
+  width: 100%
+  margin-left: -16px
+  margin-right: -16px
+
+  .works-item
+    position: relative
+    float: left
+    background: #fafafa
+    border: 16px #fff solid
+    overflow: hidden
+    &:hover
+      img
+        transform: scale(1.25)
+      .overlay
+        opacity: 1
+      h3 .icon-link
+        animation: blink 1s
+
+  img
+    transition: transform .35s ease-out
+
+  .overlay
+    +absolute
+    transition: opacity .4s
+    background: rgba(0, 0, 0, 0.9)
+    color: rgba(255, 255, 255, 0.9)
+    padding: 32px
+    opacity: 0
+
+  h3
+    .icon-link
+      transition-duration: .5s
+      font-size: 17px
+      vertical-align: text-top
+      margin-right: 8px
+      color: #fff
+      margin-top: 3.5px
+      display: inline-block
+      &:before
+        margin-left: 0
+        margin-right: 0
+
+  h4
+    max-width: 306px
+
+  .tags
+    margin-top: $lh*2
+    bottom: 26px
+    position: absolute
+    width: 100%
+    margin-left: -58px
+    text-align: right
+    .tag
+      line-height: 24px
+      font-size: 13px
+      background: #5fb6cf
+      color: #fff
+      display: inline-block
+      padding: 0 8px
+      margin: 0 6px 6px 0
+      border-radius: 1px
+      letter-spacing: 0.5px

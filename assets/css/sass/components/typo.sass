@@ -1,0 +1,28 @@
+// main: ../style.sass
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:700,300'
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700'
+
+$font-stack: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif
+$font-stack-sans: 'Source Sans Pro', sans-serif
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-stack-sans
+	clear: both
+	font-weight: 400
+	line-height: 1.4
+
+h1
+	font: 300 41px/48px $font-stack-sans
+	margin-bottom: $lh*4
+	letter-spacing: 1px
+
+h3
+	font: 600 28px/32px $font-stack-sans
+	margin-bottom: $lh
+	letter-spacing: 1.5px
+	margin-top: -4px
+
+h4
+	font: 400 16px/24px $font-stack-sans
+	letter-spacing: 1.5px

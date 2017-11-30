@@ -1,0 +1,104 @@
+// main: ../style.sass
+
+
+
+//  TABLE OF CONTENTS
+//  ===========================================================================
+//    +gap(0px)
+//    +antiblur
+//    +noselect
+//    +absolute
+//    +keyframes
+//    +placeholder
+//  ===========================================================================
+//    +desktop
+//    +desktop_and_tablet
+//    +tablet
+//    +tablet_and_mobile
+//    +mobile
+
+
+
+// Custom gaps
+
+=gap($g)
+	margin: (-$g / 2) (-$g / 2) 0 (-$g / 2)
+	.col
+		padding: $g / 2
+
+// Antiblur
+
+=antiblur()
+	filter: blur(0)
+	-webkit-filter: blur(0)
+	transform: translateZ(0) scale(1, 1)
+
+// No select
+
+=noselect()
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+// Absolute fill
+
+=absolute()
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+// Animation keyframes
+
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+// Placeholder
+
+=placeholder()
+	&::-webkit-input-placeholder
+		@content
+	&:-moz-placeholder
+		@content
+	&::-moz-placeholder
+		@content
+	&:-ms-input-placeholder
+		@content
+
+// Firefox reset
+
++placeholder
+	opacity: 1
+
+// Media queries
+
+@mixin desktop
+	@media screen and (min-width: $md + 1)
+		@content
+
+@mixin desktop_and_tablet
+	@media screen and (min-width: $sm + 1)
+		@content
+
+@mixin tablet
+	@media screen and (min-width: $sm + 1) and (max-width: $md)
+		@content
+
+@mixin tablet_and_mobile
+	@media screen and (max-width: $md)
+		@content
+
+@mixin mobile
+	@media screen and (max-width: $sm)
+		@content

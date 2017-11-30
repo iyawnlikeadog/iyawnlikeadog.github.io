@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-rename": "latest",
+    "gulp-mustache": "latest",
+    "jade-cli": "latest",
+    "run-sequence": "latest"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}

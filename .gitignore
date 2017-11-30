@@ -1,5 +1,4 @@
-img/scroll.svg
-img/swipe.svg
-js/projects.json
-img/scroll.svg
-img/swipe.svg
+node_modules/
+backup/
+npm-debug.log
+works.html

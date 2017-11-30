@@ -1,0 +1,148 @@
+// main: ../style.sass
+
+
+
+//  TABLE OF CONTENTS
+//  ===========================================================================
+//    .clearfix
+//    .media
+//      .media-left
+//      .media-body
+//      .media-right
+//  ===========================================================================
+//    .float-left
+//    .float-right
+//    .text-left
+//    .text-center
+//    .text-justify
+//    .text-right
+//  ===========================================================================
+//    .v-center (parent)
+//    .vh-center (parent)
+//  ===========================================================================
+//    .desktop-only
+//    .desktop_and_tablet-only
+//    .tablet-only
+//    .tablet_and_mobile-only
+//    .mobile-only
+//  ===========================================================================
+//    .desktop-hidden
+//    .desktop_and_tablet-hidden
+//    .tablet-hidden
+//    .tablet_and_mobile-hidden
+//    .mobile-hidden
+
+
+
+// Clearfix
+
+.clearfix
+	zoom: 1
+	&:after
+		clear: both
+	&:after,
+	&:before
+		content: "\0020"
+		display: block
+		height: 0
+		overflow: hidden
+
+// Bootstrap Media
+
+.media,
+.media-body
+  zoom: 1
+  overflow: hidden
+
+.media-body
+  width: inherit
+
+.media-left,
+.media-right,
+.media-body
+  display: table-cell
+  vertical-align: top
+
+.media-right
+  padding-left: 10px
+
+.media-left
+  padding-right: 10px
+
+// Float and align
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.text-left
+  text-align: left
+
+.text-center
+  text-align: center
+
+.text-justify
+  text-align: justify
+
+.text-right
+  text-align: right
+
+// Vertial align (for parent)
+
+.v-center
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.vh-center
+	display: flex
+	align-items: center
+	justify-content: center
+
+// Device-only
+
+.desktop-only
+  +tablet_and_mobile
+    display: none!important
+
+.desktop_and_tablet-only
+  +mobile
+    display: none!important
+
+.tablet-only
+  +desktop
+    display: none!important
+  +mobile
+    display: none!important
+
+.tablet_and_mobile-only
+  +desktop
+    display: none!important
+
+.mobile-only
+  +desktop_and_tablet
+    display: none!important
+
+// Device-hidden
+
+.desktop-hidden
+  +desktop
+    display: none!important
+
+.desktop_and_tablet-hidden
+  +desktop_and_tablet
+    display: none!important
+
+.tablet-hidden
+  +tablet
+    display: none!important
+
+.tablet_and_mobile-hidden
+  +tablet_and_mobile
+    display: none!important
+
+.mobile-hidden
+  +mobile
+    display: none!important

@@ -1,0 +1,38 @@
+{{#bug}}
+{{/bug}}
+
+<div class="works">
+  {{#works}}
+
+    {{#0}}
+      <div class="works-item" style="min-width:{{0}}%;width:{{0}}%">
+        <img src="works/{{4}}">
+
+        {{#5}}<a href="http://{{.}}" target="_blank">{{/5}}
+          <div class="overlay">
+
+            <!-- Header and subheader -->
+
+            <h3>{{#5}}<span class="icon icon-link"></span>{{/5}}{{1}}</h3>
+            <h4>{{2}}</h4>
+
+            <!-- Tags -->
+            <div class="tags">
+
+              {{#3}}
+                <div class="tag">{{.}}</div>
+              {{/3}}
+            </div>
+
+          </div>
+        {{#5}}</a>{{/5}}
+
+      </div>
+    {{/0}}
+
+    {{^0}}
+      </div><div class="works">
+    {{/0}}
+
+  {{/works}}
+</div>

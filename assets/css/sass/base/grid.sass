@@ -1,0 +1,58 @@
+// main: ../style.sass
+
+.row
+	@extend .clearfix
+	margin: (-$gutter / 2) (-$gutter / 2) 0 (-$gutter / 2)
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+
+	.col
+		padding: $gutter / 2
+		float: left
+		display: flex
+		vertical-align: top
+		-webkit-box-flex: 1
+		-ms-flex: 1 1 auto
+		flex: 1 1 auto
+		flex-basis: 0
+		&[class*="lg-"],
+		&[class*="md-"],
+		&[class*="sm-"],
+			-webkit-box-flex: 0
+			-ms-flex: none
+			flex: none
+			display: block
+
+	// Gapless grid
+
+	&.gapless
+		margin: 0
+
+		.col
+			padding: 0
+
+	// Grid content
+
+	.col > div.col-inner
+		height: 100%
+
+// Responsive grid
+
+@media screen
+	@for $i from 1 through 12
+		.lg-#{$i}
+				width: 100 * $i / 12 + %
+
+@media screen and (max-width: $md)
+	@for $i from 1 through 12
+		.md-#{$i}
+				width: 100 * $i / 12 + %
+
+@media screen and (max-width: $sm)
+	@for $i from 1 through 12
+		.sm-#{$i}
+			width: 100 * $i / 12 + %
