@@ -1,0 +1,77 @@
+// main: ../style.sass
+
+#skills
+	margin-top: $lh*10
+	z-index: 2
+
+	// layoout
+
+	.container
+		position: relative
+		> div
+			background: #fff
+			box-shadow: 0 10px 100px rgba(0,0,0,0.2)
+
+	.row
+		+gap(0)
+		position: relative
+		&:after
+			content: ""
+			top: 0
+			left: 50%
+			margin-left: -15px
+			position: absolute
+			width: 0
+			height: 0
+			border-left: 15px solid transparent
+			border-right: 15px solid transparent
+			border-top: 20px solid #eee
+
+	// aside
+
+	.aside
+		background: url(../../img/red.jpg) 50% 50%
+		background-size: cover
+		color: #fff
+		padding: $lh*9 $lh*7 $lh*8 $lh*7!important
+		text-align: center
+		opacity: .95
+
+		h2
+			margin-bottom: 0
+		h3
+			font-weight: 300
+
+	// skills
+
+	.skills
+		padding: $lh*9 $lh*7 $lh*8 $lh*7
+		.item
+			h3
+				margin: 0
+			p
+				margin-bottom: 12px
+				font-size: 16px
+				letter-spacing: 1px
+				margin-bottom: 8px
+
+		> div:last-of-type .progress-bar
+			margin-bottom: 0
+
+	// progress bars
+
+	.progress-bar
+		width: 100%
+		height: 7px
+		background: #444
+		margin: 0 0 $lh*2 0
+		border-radius: 4px 2px 2px 4px
+		.progress
+			height: 100%
+			border-radius: 2px 0 0 2px
+			&.color-green
+				background: #99e3b3
+			&.color-yellow
+				background: #f9d582
+			&.color-red
+				background: #ff807a

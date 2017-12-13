@@ -1,6 +1,6 @@
 // main: ../style.sass
 
-button, .btn
+button, .btn, a.btn
 	-webkit-appearance: none
 	display: inline-block
 	outline: none
@@ -10,14 +10,19 @@ button, .btn
 	text-transform: uppercase
 	background: $color-link
 	color: #fff
-	font: 600 12px/36px $font-stack
+	font: 600 14px/36px $font-stack-sans
 	height: 36px
 	text-align: center
 	transition-duration: .3s
 	cursor: pointer
 	&:hover
 		background: $color-hover
-		color: #fff
+		color: #fff!important
 
 	span
 		margin-right: 10px
+
+	&.btn-large
+		height: 48px
+		font: 600 16px/48px $font-stack-sans
+		padding-right: 22px

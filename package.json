@@ -1,12 +1,24 @@
 {
   "dependencies": {
     "gulp": "latest",
+    "babelify": "latest",
+    "gulp-jade": "latest",
+    "browserify": "latest",
+    "babel-core": "latest",
+    "gulp-uglify": "latest",
     "gulp-rename": "latest",
+    "vinyl-buffer": "latest",
+    "run-sequence": "latest",
     "gulp-mustache": "latest",
-    "jade-cli": "latest",
-    "run-sequence": "latest"
+    "gulp-sourcemaps": "latest",
+    "gulp-livereload": "latest",
+    "babel-preset-es2015": "latest",
+    "vinyl-source-stream": "latest"
   },
   "scripts": {
     "build": "gulp"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
   }
 }

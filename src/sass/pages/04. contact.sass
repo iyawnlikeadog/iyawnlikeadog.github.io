@@ -1,0 +1,140 @@
+// main: ../style.sass
+
+#contact
+	margin-top: -$lh*15
+	padding: $lh*25 0 $lh*18 0
+	background: #f6f6f6
+
+	.container
+		max-width: $max-width*10/12
+
+	.contact_shape
+		width: 100%
+		height: auto
+		position: absolute
+		top: 0
+		transform: translateY(-95%)
+
+	.lg-9
+		width: 70%
+	.lg-3
+		width: 30%
+
+	// Main
+
+	form
+		.row
+			+gap(12px)
+
+		.btn
+			float: right
+			span:before
+				margin-left: 0
+			.icon-spin2:before
+				animation: 3s rotating linear infinite
+
+	input, textarea
+		background: #fff
+		border: none
+		letter-spacing: 1px
+		font-size: 16px
+		font-family: $font-stack-sans
+		line-height: 24px
+		padding: 12px 18px
+		margin: 0
+		border-radius: 0
+		&:focus
+			box-shadow: none
+		&.parsley-error
+			box-shadow: inset 0 0 5px 2px #ffa9a9
+		+placeholder
+			color: #aaa
+
+	.col
+		.underline
+			position: relative
+			&:before
+				content: "\0020"
+				position: absolute
+				left: 50%
+				bottom: -2px
+				width: 0
+				height: 0
+				border-bottom: 2px $color-link solid
+				transition-duration: .6s
+			&.underline-textarea
+				transition-duration: 1.2s
+		&.active
+			.underline
+				&:before
+					left: 0%
+					width: 100%
+
+	// Aside
+
+	.tooltip
+		background: $color-black
+		color: #fff
+		position: absolute
+		left: 50%
+		margin-top: 5px
+		padding: 0 10px 1px 10px
+		border-radius: 2px
+		white-space: nowrap
+		transform: translateX(-50%)
+		opacity: 0
+		font-size: 13px
+		transition-delay: .2s
+		transition-duration: .3s
+		a
+			color: #fff
+			&:hover
+				color: #ddd
+		&:before
+			content: "\e810"
+			font-family: fontello
+			position: absolute
+			left: 50%
+			top: -11px
+			transform: translateX(-7px)
+			color: $color-black
+			height: 12px
+			overflow: hidden
+
+	.icons
+		margin-left: -28px
+		margin-right: -34px
+		.col
+			position: relative
+			text-align: center
+			padding-bottom: 0
+			&:hover
+				.tooltip
+					opacity: 1
+
+	.aside
+		padding-left: 66px
+		text-align: center
+
+		> div
+			width: 222px
+			float: right
+			// display: flex
+			// flex-direction: row
+			// align-items: center
+			// .media-body
+				overflow: visible
+				// text-align: right
+				flex-grow: 1
+
+		// .avatar
+			border-radius: 50%
+			width: 64px
+
+		h2
+			margin-bottom: $lh
+
+		h4
+			letter-spacing: 3.45px
+			margin-left: 4px
+			margin-bottom: 10px

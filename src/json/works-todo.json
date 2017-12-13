@@ -1,0 +1,10 @@
+{
+  "works": [
+    ["50", "medium", "Seven Palace", "Residential Complex in Astana, KZ", ["Frontend", "Design"], "", ""],
+    ["25", "small", "Zan Gov KZ", "Accessing tens of thousands of legal acts and statutes", ["Frontend", "Design"], "", ""],
+    ["25", "small", "maestro9", "This page is built using", ["Jade", "Sass", "Vanilla.js", "Mustache"], "", ""],
+
+    ["25", "small", "EXL", "Design Studio", ["Frontend", "Design"], "", ""],
+    ["25", "small", "Musica.js", "jQuery Media Player", ["Frontend", "Design", "App: jQuery"], "", ""]
+  ]
+}

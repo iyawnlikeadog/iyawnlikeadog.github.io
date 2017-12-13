@@ -6,26 +6,29 @@
 
     {{#0}}
       <div class="works-item" style="min-width:{{0}}%;width:{{0}}%">
-        <img src="works/{{4}}">
 
-        {{#5}}<a href="http://{{.}}" target="_blank">{{/5}}
+        <div class="placeholder {{1}}" data-large="works/{{5}}">
+          <img src="works/previews/{{5}}" class="preview">
+        </div>
+
+        {{#6}}<a href="http://{{.}}" target="_blank">{{/6}}
           <div class="overlay">
 
             <!-- Header and subheader -->
 
-            <h3>{{#5}}<span class="icon icon-link"></span>{{/5}}{{1}}</h3>
-            <h4>{{2}}</h4>
+            <h3>{{#6}}<span class="icon icon-link"></span>{{/6}}{{2}}</h3>
+            <h4>{{3}}</h4>
 
             <!-- Tags -->
             <div class="tags">
 
-              {{#3}}
+              {{#4}}
                 <div class="tag">{{.}}</div>
-              {{/3}}
+              {{/4}}
             </div>
 
           </div>
-        {{#5}}</a>{{/5}}
+        {{#6}}</a>{{/6}}
 
       </div>
     {{/0}}

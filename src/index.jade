@@ -17,18 +17,18 @@ html
 		link(rel="stylesheet" type="text/css" href="assets/css/fontello.css")
 		link(rel="stylesheet" type="text/css" href="assets/css/compiled/style.min.css")
 		
-		//- script(src="assets/js/jquery-3.0.0.min.js")
+		script(src="assets/js/jquery-3.2.1.min.js")
 		script(src="assets/js/masonry.pkgd.min.js")
 		script(src="assets/js/prefixfree.min.js")
-		script(src="assets/js/main.js")
+		script(src="https://cdn.emailjs.com/dist/email.min.js")
+		script(src="assets/js/parsley.min.js")
+		script(src="assets/js/app.js")
 		
 	body
-	
-		// Sections -> Containers
 
 		// Header
 		
-		header
+		header#home
 			div.container
 			
 				a(href="/" id="logo")
@@ -36,10 +36,10 @@ html
 					
 				nav
 					ul
-						li: a(href="#") Home
-						li: a(href="#") Works
-						li: a(href="#") Skills
-						li: a(href="#" class="btn btn-primary") Hire me
+						li: a(href="#home") Home
+						li: a(href="#works") Works
+						li: a(href="#skills") Skills
+						li: a(href="#contact" class="btn btn-primary") Hire me
 					//- div.nav_btn: #[div]#[div]#[div]
 
 		// Main
@@ -54,10 +54,64 @@ html
 			
 		section#works.clearfix
 			div.container
-				include ../works.html
+				include ../temp/works.html
 		
+		// Skills
+		
+		section#skills
+			div.container
+				div
+					div.row
+						div.col.lg-4.md-12.aside
+							h2 #[strong Skills.]
+							h3 What I can do.
+						div.col.lg-8.md-12
+							include ../temp/skills.html
+
+		// Contact
+
+		section#contact
+			img(src="assets/svg/contact_shape.svg" class="contact_shape")
+			div.container
+				div.row
+				
+					//	Main
+					
+					div.col.lg-9.md-12.main
+						form(id="sendmsg" class="clearfix" data-parsley-validate="")
+							div.row
+								div.col.lg-6.sm-12
+									input(type='text' id='name' placeholder="Your name" autocomplete="off" required data-parsley-trigger="change" data-parsley-errors-messages-disabled)
+									div.underline
+								div.col.lg-6.sm-12
+									input(type='email' id='mail' placeholder="Your email" autocomplete="off" required data-parsley-trigger="change" data-parsley-errors-messages-disabled)
+									div.underline
+								div.col.lg-12
+									textarea(id="msg" name="msg" rows="8" placeholder="Message" autocomplete="off" required data-parsley-trigger="change" data-parsley-errors-messages-disabled)
+									div.underline
+								div.col.lg-12
+									button(type="submit" class="btn btn-large") #[span.icon-paper-plane] Send message
+									
+					// Aside
+					
+					div.col.lg-3.md-12.aside
+						div
+							h2 Get #[span in] #[strong touch]
+							h4 ildar.dev9@gmail.com
+							div.row.icons
+								div.col.lg-4
+									span.icon-wifi
+									div.tooltip.wifi Remote OK
+								div.col.lg-4
+									span.icon-flight
+									div.tooltip Possible relocation
+								div.col.lg-4
+									span.icon-mail-alt
+									div.tooltip: a(href="mailto:ildar.dev9@gmail.com") Send email
+
+
 		// Footer
 
-		//- footer
-		//- 	div.container
-		//- 		p &copy; 2016 Sitename.
+		footer
+			div.container
+				p &copy; #[span#year] maestro9
