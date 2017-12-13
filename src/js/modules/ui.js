@@ -11,7 +11,7 @@ export default function ui() {
 
   // Show current year
 
-  $('year').text( (new Date()).getFullYear() )
+  $('#year').text( (new Date()).getFullYear() )
 
   // Contact form lines animation
 
@@ -36,5 +36,9 @@ export default function ui() {
   	}, 500)
 
   })
+
+  // Wow
+
+  new WOW().init()
 
 }

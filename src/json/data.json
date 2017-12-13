@@ -1,7 +1,7 @@
 {
   "works": [
     ["25", "small", "Geenee", "Shop the products you love right from the photos of your favorite instagrammers", ["Frontend", "WP"], "geenee.jpg", ""],
-    ["25", "small", "Vici", "Discover the finest Lightroom presets", ["Frontend", "Commerce", "Craft CMS"], "vici.jpg", ""],
+    ["25", "small", "Vici", "Discover the finest Lightroom presets", ["Frontend", "Commerce", "Craft CMS"], "vici.jpg", "vicivisuals.com"],
     ["50", "large", "Share the Lex", "Take a look around and get to know Lexington, Kentucky through the lens of locals", ["Frontend", "Backend", "WP"], "share_the_lex.jpg",  "sharethelex.com"],
     ["50", "medium", "Greenestreet", "Vegan Food in NYC", ["Frontend", "Backend", "Shopify"], "greene_st.png", ""],
     [],
@@ -9,8 +9,8 @@
     ["50", "medium", "Ayre Hotels", "Spanish hotel brand. Part of Palladium Hotel Group", ["Frontend", "WP"], "ayre.jpg", "ayrehoteles.com/en/"],
     ["25", "small", "Igloo", "South African ice producer and distributer", ["Frontend", "Statamic"], "igloo.jpg", ""],
 
-    ["50", "medium", "Maria Zoe", "British born Interior Architect", ["Frontend", "Statamic"], "maria_zoe.jpg", ""],
-    ["25", "small", "Zenotes", "Modern application for storing notes, code snippets and todo lists", ["App", "AngularJS", "nw.js", "Design"], "zenotes.jpg", ""],
+    ["50", "medium", "Maria Zoe Designs", "British born Interior Architect", ["Frontend", "Statamic"], "maria_zoe.jpg", "mariazoedesigns.com"],
+    ["25", "small", "Zenotes", "Modern application for storing notes, code snippets and todo lists", ["App", "AngularJS", "nw.js"], "zenotes.jpg", ""],
     ["25", "small", "Meatmonger", "South African butcher shop & restaurant", ["Frontend", "Statamic"], "meatmonger.jpg", "meatmonger.co.za"],
 
     ["25", "small", "Adviser", "Personalized Wealth Management", ["Frontend", "WP"], "adviser.jpg", ""],
@@ -23,9 +23,9 @@
   ],
   "skills": [
     ["HTML/CSS", "html", "94", "green", "HTML5, CSS3, SASS, SCSS, PostCSS, Less, Stylus, Pug, Mustache, Twig"],
-    ["Front End", "front", "80", "yellow", "jQuery, vanilla.js, AngularJS, React, CoffeeScript, Riot.js"],
+    ["Front End", "front", "80", "yellow", "jQuery, vanilla.js, AngularJS, vue.js, CoffeeScript, Riot.js"],
     ["CMS", "cms", "85", "yellow", "Craft CMS, Statamic, Shopify, WordPress, Cockpit, CS Cart, Jekyll"],
-    ["Back End/Other", "back", "65", "red", "PHP, MySQL, NoSQL, Python, Node.js, nw.js, Electron, Git, Grunt/Gulp"],
-    ["Design", "design", "88", "green", "Photoshop, Illustrator, Sketch, Corel Draw, 3ds Max"]
+    ["Back End/Other", "back", "75", "red", "PHP, MySQL, NoSQL, Python, Node.js, nw.js, Electron, Git, Grunt/Gulp"],
+    ["Design", "design", "88", "green", "Photoshop, Illustrator, Sketch, etc"]
   ]
 }

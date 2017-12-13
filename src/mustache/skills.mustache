@@ -4,13 +4,23 @@
 <div class="skills">
   {{#skills}}
 
-    <div id="{{ 1 }}" class="item animated fadeIn" style="animation-delay:${delay}s">
+    <div id="{{ 1 }}" class="wow item animated fadeIn" style="animation-delay:0.2s">
       <h3>{{ 0 }}</h3>
       <p>{{ 4 }}</p>
       <div class="progress-bar">
-        <div class="progress animated color-{{ 3 }}" style="width: {{ 2 }}%"></div>
+        <div class="progress wow animated color-{{ 3 }}" style="width: {{ 2 }}%"></div>
       </div>
     </div>
+
+    <style>
+      @keyframes RiseHorizontal-{{ 1 }} {
+        from { width: 0; }
+        to   { width: {{ 2 }}%; }
+      }
+      .skills #{{ 1 }} .progress {
+        animation: RiseHorizontal-{{ 1 }} 2s ease-in-out;
+      }
+    </style>
 
   {{/skills}}
 </div>

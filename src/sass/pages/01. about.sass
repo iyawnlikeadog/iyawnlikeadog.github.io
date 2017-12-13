@@ -2,12 +2,36 @@
 
 #about
 
-  p
-    max-width: 720px
-    margin-bottom: $lh*2
-    letter-spacing: 0.5px
+	p
+		max-width: 740px
+		margin-bottom: $lh*2
+		letter-spacing: 0.5px
 
-  .icon-location
-  	color: #f16752
-  	&:before
-  		margin: 0
+	.icon-location
+		color: #f16752
+		position: relative
+		&:before
+			margin: 0
+			z-index: 1
+			position: relative
+			text-shadow: 0 0 5px #fff
+		img
+			position: absolute
+			max-width: inherit!important
+			transform: rotate(-5deg)
+			left: -250px
+			top: -128px
+			width: 340px
+			opacity: 0
+			pointer-events: none
+			transition: opacity 1s
+		&:hover
+			img
+				opacity: 0.13
+
+	// Responsive
+
+	+mobile
+		.container
+			padding-top: 0
+			padding-bottom: 0

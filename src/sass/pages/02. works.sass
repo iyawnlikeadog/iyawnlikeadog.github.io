@@ -17,6 +17,9 @@
   margin-left: -16px
   margin-right: -16px
 
+  +mobile
+    width: calc(100% + 20px)
+
   .placeholder
     background-color: #eee
     position: relative
@@ -32,8 +35,7 @@
         transform: scale(1.01)
     &.medium
       &:after
-        // padding-bottom: 46.93%
-        padding-bottom: 47.1%
+        padding-bottom: calc(50% - 16px)
       img.large_loaded
         transform: scale(1.01)
     &.small
@@ -62,6 +64,14 @@
     background: #fafafa
     border: 16px #fff solid
     overflow: hidden
+    &.div-50
+      width: 50%
+      max-width: 50%
+    &.div-25
+      width: 25%
+      max-width: 25%
+    img.large_loaded
+      min-width: 100%
     &:hover
       img.large_loaded
         transform: scale(1.25)
@@ -69,6 +79,12 @@
         opacity: 1
       h3 .icon-link
         animation: blink 1s
+
+    +mobile
+      width: 100%!important
+      max-width: 100%!important
+      border-bottom-width: 6px
+      border-top-width: 8px
 
   .overlay
     +absolute

@@ -5,16 +5,15 @@ html
 	head
 	
 		title maestro9
-		meta(name="author" content="")
-		meta(name="description" content="")
-		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-		include favicon.html
+		include html/favicon.html
+		include html/seo.html
 
 		link(rel="stylesheet" type="text/css" href="assets/css/fontello.css")
+		link(rel="stylesheet" type="text/css" href="assets/css/animate.min.css")
 		link(rel="stylesheet" type="text/css" href="assets/css/compiled/style.min.css")
 		
 		script(src="assets/js/jquery-3.2.1.min.js")
@@ -22,9 +21,12 @@ html
 		script(src="assets/js/prefixfree.min.js")
 		script(src="https://cdn.emailjs.com/dist/email.min.js")
 		script(src="assets/js/parsley.min.js")
+		script(src="assets/js/wow.min.js")
 		script(src="assets/js/app.js")
 		
 	body
+	
+		include html/gtm_body.html
 
 		// Header
 		
@@ -48,7 +50,7 @@ html
 			div.container
 				//- h1 I provide #[strong Design Solutions.]#[br]My work is presented here, check them below.
 				h1 Hi! I'm #[strong Ildar Akhmaltdinov.]#[br]Here are a couple of lines about me:
-				p I'm a #[span#age] years old designer and web-developer born in Karaganda, KZ and currently living in #[span.icon-location] Almaty, Kazakhstan. Now check my portfolio.
+				p I'm a #[span#age] years old web-developer and designer born in Karaganda, KZ and currently living in <span class="icon-location"><img src="assets/svg/kz.svg"/></span> Almaty, Kazakhstan. Now check out my portfolio.
 				
 		// Works
 			

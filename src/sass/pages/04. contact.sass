@@ -95,11 +95,10 @@
 			font-family: fontello
 			position: absolute
 			left: 50%
-			top: -11px
+			top: -19px
 			transform: translateX(-7px)
 			color: $color-black
 			height: 12px
-			overflow: hidden
 
 	.icons
 		margin-left: -28px
@@ -138,3 +137,25 @@
 			letter-spacing: 3.45px
 			margin-left: 4px
 			margin-bottom: 10px
+
+	// Responsive
+
+	@media screen and (max-width: 880px)
+		.container > .row
+			display: flex
+			flex-direction: column-reverse
+			> .lg-9,
+			> .lg-3
+				width: 100%
+			.aside
+				padding-left: 16px
+				padding-right: 16px
+				> div
+					float: none
+					margin: auto
+
+	+mobile
+		margin-top: -320px
+		padding-bottom: 0
+		.btn
+			width: 100%

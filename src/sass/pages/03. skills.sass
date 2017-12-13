@@ -68,10 +68,25 @@
 		border-radius: 4px 2px 2px 4px
 		.progress
 			height: 100%
+			width: 0
 			border-radius: 2px 0 0 2px
+			// transform: translateX(-50%) scaleX(0)
 			&.color-green
 				background: #99e3b3
 			&.color-yellow
 				background: #f9d582
 			&.color-red
 				background: #ff807a
+
+	// Responsive
+
+	+mobile
+		margin-top: 10px
+		.aside
+			padding-left: 0!important
+			padding-right: 0!important
+		.skills
+			padding: 30px 30px 40px 30px
+			.item p
+				line-height: 24px
+				margin: 6px 0 12px 0
