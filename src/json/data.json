@@ -23,7 +23,7 @@
   ],
   "skills": [
     ["HTML/CSS", "html", "94", "green", "HTML5, CSS3, SASS, SCSS, PostCSS, Less, Stylus, Pug, Mustache, Twig"],
-    ["Front End", "front", "80", "yellow", "jQuery, vanilla.js, AngularJS, vue.js, CoffeeScript, Riot.js"],
+    ["Front End", "front", "80", "yellow", "jQuery, vanilla.js, AngularJS, vue.js, CoffeeScript, Riot.js, React"],
     ["CMS", "cms", "85", "yellow", "Craft CMS, Statamic, Shopify, WordPress, Cockpit, CS Cart, Jekyll"],
     ["Back End/Other", "back", "75", "red", "PHP, MySQL, NoSQL, Python, Node.js, nw.js, Electron, Git, Grunt/Gulp"],
     ["Design", "design", "88", "green", "Photoshop, Illustrator, Sketch, etc"]
